@@ -43,6 +43,21 @@ canada_fixed %>%
     a. one link to a chart or an image and 
     b. at least one itemized or enumerated list.
     
+    I think one of the most relevant examples of data science would be the statistics around the COVID-19 virus. 
+    Especially at the beginning of the pandemic, it was important to: 
+    1. Gather data around the number of cases
+    2. Interpert data relating to transmission and masks
+    3. Find the relationship between vaccination and severity of symptoms
+    4. Use this data to make public health decisions
+    
+    There were many line charts shown on the news, to let people know if the number of cases were going up or down, so
+    they could determine how cautious they should be. Gathering and organizing this data was very important because
+    then it could be used to predict the number and severity of cases, so that proper precautions and measures could
+    be taken to handle the upcoming surge. This gave officials the chance to manage resources more effectively.
+
+url <- "https://www.google.com/imgres?imgurl=http%3A%2F%2Fcdn.statcdn.com%2FInfographic%2Fimages%2Fnormal%2F21346.jpeg"
+print(paste("<center><src=\"", url, "\"></center>", collapse=""))
+
 
 Note: your submission is supposed to be fully reproducible, i.e. the TA and I will 'knit' your submission in RStudio. Including the link to the image is the tricky part here. Make sure that you don't use any file structure that depends on your computing environment.
 
