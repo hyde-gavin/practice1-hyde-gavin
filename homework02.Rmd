@@ -27,6 +27,7 @@ Please use Github to collaborate on this problem. For example, one member can cr
 
 life5060 <- read.csv("https://raw.githubusercontent.com/ds202-at-isu/materials/master/01_collaborative-environment/data/gapminder-5060.csv")
 
+canada <- life5060[life5060$country == "Canada", ]
 
 canada_fixed <- canada %>% mutate(
   lifeExp = replace(lifeExp, year==1957, 69.96)  
@@ -34,9 +35,11 @@ canada_fixed <- canada %>% mutate(
 
 
 canada_fixed %>% 
-  ggplot(aes(x = lifeExp, y = gdpPercap, colour=country)) + geom_line() +
-  geom_line(data = life5060 %>% 
-              filter(country %in% c("United States")))
+  ggplot(aes(x = lifeExp, y = gdpPercap, colour=country)) + geom_point() +
+  geom_point(data = life5060 %>% 
+              filter(country %in% c("United States"))) + 
+  geom_point(data = life5060 %>% 
+             filter(country %in% c("Australia")))
 
 
 3. Write a paragraph (~200 words) describing an example of what you consider data science. Write your paragraph in R Markdown. Include at least 
